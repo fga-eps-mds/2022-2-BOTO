@@ -2,7 +2,7 @@
 
 * Disciplina: Métodos de desenvolvimento de software
 
-* Squad 8
+* Squad 2
 > Ana Beatriz Norberto da Silva | 211041080
 
 > Ana Luíza Fernandes Alves da Rocha | 211030667
