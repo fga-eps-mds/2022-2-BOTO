@@ -13,7 +13,7 @@ assignees: ''
 
 Issue; Template
 
-#### O que? 
+#### Objetivo? 
 Explicar brevemente o assunto (Template de issue para facilitar a vida)
 
 #### Screenshots
