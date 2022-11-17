@@ -9,6 +9,8 @@
 
 > Beatriz Vieira Nascimento |  211031628
 
+> Geovanna Maciel Avelino da Costa | 202016328
+
 > Leonardo Gonçalves Machado | 211029405
 
 > Mylena Angélica Silva Farias | 211029497
