@@ -1,3 +1,4 @@
+![logo boto](https://user-images.githubusercontent.com/86479209/203332956-cb829463-1e57-49fb-aa91-8a7b0db4052e.png)
 # 2022-2-Squad02
 
 * Disciplina: Métodos de desenvolvimento de software
