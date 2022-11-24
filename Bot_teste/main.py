@@ -2,7 +2,7 @@ import constants as keys
 from telegram.ext import *
 import responses as res
 
-print("Bot started...")
+print("Bot started ...")
 
 
 def start(update, context):
