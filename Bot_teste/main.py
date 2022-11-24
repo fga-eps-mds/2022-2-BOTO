@@ -3,7 +3,6 @@ from telegram.ext import *
 import responses as res
 
 print("Bot started ...")
-#comentario teste
 
 def start(update, context):
     update.message.reply_text("Digite algo!")
