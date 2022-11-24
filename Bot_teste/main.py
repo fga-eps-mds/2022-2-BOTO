@@ -5,7 +5,7 @@ import responses as res
 print("Bot started ...")
 
 def start(update, context):
-    update.message.reply_text("Digite algo!")
+    update.message.reply_text("Digite!")
 
 
 def help_command(update, context):
