@@ -12,7 +12,6 @@ def start(update, context):
 def help_command(update, context):
     update.message.reply_text("Boa sorte")
 
-
 def handle_message(update, context):
     text = str(update.message.text).lower()
     response = res.respostas(text)
