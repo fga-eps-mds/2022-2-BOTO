@@ -1,42 +1,39 @@
-import constants as keys
 from telegram.ext import *
-import responses as res
+from telegram import *
+from teacher import TeacherText
 
-print("Bot started...")
+TOKEN = "5840991803:AAGxIhCYY3dNqpQglvaxkdLZp0zMAwKlpZk"
 
+##comando iniciais
+teacherText = "Professor"
+studentText = "Aluno"
 
 def start(update, context):
-    update.message.reply_text("Digite algo!")
-
-
-def help_command(update, context):
-    update.message.reply_text("Boa sorte")
-
+    buttons = [[KeyboardButton(teacherText)], [KeyboardButton(studentText)]]
+    context.bot.send_message(chat_id=update.effective_chat.id, text = "Olá, seja bem vindo ao Boto! \nPrimeiro gostariamos de algumas informações.", reply_markup=ReplyKeyboardMarkup(buttons))
 
 def handle_message(update, context):
-    text = str(update.message.text).lower()
-    response = res.respostas(text)
+    if teacherText in update.message.text:
+        context.bot.send_message(chat_id=update.effective_chat.id,text = "Olá, professor",
+                                 reply_markup = ReplyKeyboardRemove())
+        t = TeacherText()
+        t.name(update, context)
+        t.password_input(update, context)
 
-    update.message.reply_text(response)
-
-
-def error(update, context):
-    print(f"Atualizar {update} causou erro {context.error}")
-
+    if studentText in update.message.text:
+        context.bot.send_message(chat_id=update.effective_chat.id, text = "Olá, Aluno",
+                                 reply_markup=ReplyKeyboardRemove())
 
 def main():
-    updater = Updater(keys.API_KEY, use_context=True)
+
+    updater = Updater(token=TOKEN)
     dp = updater.dispatcher
 
     dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(CommandHandler("help", help_command))
 
     dp.add_handler(MessageHandler(Filters.text, handle_message))
 
-    dp.add_error_handler(error)
-
     updater.start_polling(3)
     updater.idle()
-
 
 main()
