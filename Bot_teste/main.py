@@ -1,9 +1,9 @@
 from telegram.ext import *
 from telegram import *
 from teacher import TeacherText
+from student import StudentText
 import emoji
 
-print("Bot started...")
 
 TOKEN = ""
 
@@ -28,6 +28,9 @@ def handle_message(update, context):
     if studentText in update.message.text:
         context.bot.send_message(chat_id=update.effective_chat.id, text = "Olá, Aluno",
                                  reply_markup=ReplyKeyboardRemove())
+        t = StudentText()
+        t.name(update, context)
+        t.matricula(update, context)
 
 ## comando para quando alguma funcao nao esta pronta
 def not_finished(update, context):
