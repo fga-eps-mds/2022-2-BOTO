@@ -1,11 +1,7 @@
-from telegram.ext import *
 from telegram import *
 from teacher import TeacherText
 from student import StudentText
 import emoji
-
-
-TOKEN = ""
 
 ##comando iniciais
 teacherText = "Professor"
@@ -47,23 +43,3 @@ def help_command(update, context):
                               "/deletar_conteudo - apaga um conteudo na base de dados;\n"
                               "/editar_conteudo - altera um conteudo existente na base de dados.")
 
-
-def main():
-
-    updater = Updater(token=TOKEN)
-    dp = updater.dispatcher
-
-    dp.add_handler(CommandHandler("start", start))
-    dp.add_handler(CommandHandler("help", help_command))
-
-    dp.add_handler(CommandHandler("novo_conteudo", not_finished))
-    dp.add_handler(CommandHandler("acessar_conteudo", not_finished))
-    dp.add_handler(CommandHandler("deletar_conteudo", not_finished))
-    dp.add_handler(CommandHandler("editar_conteudo", not_finished))
-
-    dp.add_handler(MessageHandler(Filters.text, handle_message))
-
-    updater.start_polling(3)
-    updater.idle()
-
-main()
