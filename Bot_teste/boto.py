@@ -3,7 +3,7 @@ import handlers
 
 print("Bot started. . .\n")
 
-TOKEN = "5805348211:AAG5EDK_B5pI0nWMBE1Vr9q4rKeF57ptz-U"
+TOKEN = ""
 
 updater = Updater(token=TOKEN)
 dp = updater.dispatcher
