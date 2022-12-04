@@ -7,11 +7,12 @@ o BOTO é um bot do telegram criado pelos alunos da FGA-UNB, que tem como princi
 
 
 # Tecnologias utilizadas
+> :construction: Projeto em construção :construction:
 
 # Nossa arquitetura
-
+> :construction: Projeto em construção :construction:
 # Como testar o BOTO no telegram
-
+> :construction: Projeto em construção :construction:
 
 # Squad 2
 
