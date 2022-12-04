@@ -3,7 +3,7 @@
 ![logo boto](https://user-images.githubusercontent.com/86479209/203332956-cb829463-1e57-49fb-aa91-8a7b0db4052e.png)
 
 # <h1 align="center"> Resumo do BOTO </h1>
-o BOTO é um bot do telegram criado pelos alunos da FGA-UNB, que tem como principal função de ter acesso a informações importantes das materias.
+o BOTO é um bot criado pelos alunos da FGA-UNB, que tem como principal função de ter acesso a informações importantes das materias pelo telegram.
 
 
 # Tecnologias utilizadas
