@@ -1,5 +1,4 @@
 from telegram import *
-from teacher import TeacherText
 from student import StudentText
 import emoji
 
@@ -13,13 +12,11 @@ def start(update, context):
                              text = "Olá, seja bem vindo ao Boto! \nPrimeiro gostariamos de algumas informações.",
                              reply_markup=ReplyKeyboardMarkup(buttons))
 
+##Lidando com a escolha do start
 def handle_message(update, context):
     if teacherText in update.message.text:
-        context.bot.send_message(chat_id=update.effective_chat.id,text = "Olá, professor",
+        context.bot.send_message(chat_id=update.effective_chat.id,text = "Olá, professor digite /professorEntrada e seu código \nExemplo: '/professorEntrada 123456'",
                                  reply_markup = ReplyKeyboardRemove())
-        t = TeacherText()
-        t.name(update, context)
-        t.password_input(update, context)
 
     if studentText in update.message.text:
         context.bot.send_message(chat_id=update.effective_chat.id, text = "Olá, Aluno",
@@ -27,6 +24,33 @@ def handle_message(update, context):
         t = StudentText()
         t.name(update, context)
         t.matricula(update, context)
+
+## comando para verificar a entrada do professor
+def professorEntrada(update,context):
+    ##Codigo correto professor
+    codigoprofessor = "p123"
+
+    try:
+        ##Pegando o codigo digitado na mensagem
+        user_message = update.message.text
+        user_message = user_message.split(" ")
+        user_code = user_message[1]
+
+        ##Verificando se o codigo inserido é o desejado
+        if user_code == codigoprofessor:
+            ##Descobrindo informaçôes do usuario atraves da conta dele no telegram
+            user_info = update.message
+            info = {"First_Name": user_info.from_user.first_name, "Last_Name": user_info.from_user.last_name,
+                    "Código": user_code}
+            print(info)
+        else:
+            context.bot.send_message(chat_id=update.effective_chat.id, text = "Código, incorreto. Tente novamente. \nDigite /start para entrar como aluno ou /professorEntrada e seu código. \nExemplo: '/professorEntrada 123456'",
+                                     reply_markup=ReplyKeyboardRemove())
+    except Exception as e:
+        context.bot.send_message(chat_id=update.effective_chat.id,
+                                 text= f"Erro. Tente novamente. \nException: {e}",
+                                 reply_markup=ReplyKeyboardRemove())
+
 
 ## comando para quando alguma funcao nao esta pronta
 def not_finished(update, context):

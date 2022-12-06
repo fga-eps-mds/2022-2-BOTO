@@ -3,7 +3,7 @@ import handlers
 
 print("Bot started. . .\n")
 
-TOKEN = ""
+TOKEN = "5840991803:AAGxIhCYY3dNqpQglvaxkdLZp0zMAwKlpZk"
 
 updater = Updater(token=TOKEN)
 dp = updater.dispatcher
@@ -15,6 +15,8 @@ dp.add_handler(CommandHandler("novo_conteudo", handlers.not_finished))
 dp.add_handler(CommandHandler("acessar_conteudo", handlers.not_finished))
 dp.add_handler(CommandHandler("deletar_conteudo", handlers.not_finished))
 dp.add_handler(CommandHandler("editar_conteudo", handlers.not_finished))
+
+dp.add_handler(CommandHandler("professorEntrada", handlers.professorEntrada))
 
 dp.add_handler(MessageHandler(Filters.text, handlers.handle_message))
 

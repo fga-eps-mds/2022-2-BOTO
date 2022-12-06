@@ -1,3 +1,7 @@
+"""
+
+Esse arquivo teacher.py podera ser excluido se o pullrequest da issue #23 for aceita
+
 from telegram.ext import *
 from telegram import *
 import time
@@ -31,4 +35,4 @@ class TeacherText():
         else:
             context.bot.send_message(chat_id=update.effective_chat.id, text="Senha errada",
                                      reply_markup=ReplyKeyboardRemove())
-
+"""
