@@ -7,7 +7,8 @@ o BOTO é um bot criado pelos alunos da FGA-UNB, que tem como principal função
 
 
 # Tecnologias utilizadas
-> :construction: Projeto em construção :construction:
+- Python
+- MySQL
 
 # Nossa arquitetura
 > :construction: Projeto em construção :construction:
