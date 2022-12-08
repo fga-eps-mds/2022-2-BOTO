@@ -1,29 +1,51 @@
 from telegram import *
-from student import StudentText
 import emoji
 
-##comando iniciais
+## comandos iniciais
 teacherText = "Professor"
 studentText = "Aluno"
 
 def start(update, context):
     buttons = [[KeyboardButton(teacherText)], [KeyboardButton(studentText)]]
     context.bot.send_message(chat_id=update.effective_chat.id,
-                             text = "Olá, seja bem vindo ao Boto! \nPrimeiro gostariamos de algumas informações.",
+                             text= "Olá, seja bem vindo ao Boto! \nPrimeiro gostariamos de algumas informações.",
                              reply_markup=ReplyKeyboardMarkup(buttons))
 
 ##Lidando com a escolha do start
 def handle_message(update, context):
     if teacherText in update.message.text:
-        context.bot.send_message(chat_id=update.effective_chat.id,text = "Olá, professor digite /professorEntrada e seu código \nExemplo: '/professorEntrada 123456'",
-                                 reply_markup = ReplyKeyboardRemove())
+        context.bot.send_message(chat_id=update.effective_chat.id, text= "Olá, professor digite /professorEntrada e seu código \nExemplo: '/professorEntrada 123456'",
+                                 reply_markup=ReplyKeyboardRemove())
 
     if studentText in update.message.text:
-        context.bot.send_message(chat_id=update.effective_chat.id, text = "Olá, Aluno",
+        context.bot.send_message(chat_id=update.effective_chat.id, text= "Olá, Aluno!\n Para continuar digite, /matricula e sua matricula.\n 'Exemplo: /matricula 210000000'", reply_markup=ReplyKeyboardRemove())
+
+def alunoEntrada(update, context):
+    try:
+        ## Pegando a matricula do aluno
+        user_message = update.message.text
+        user_message = user_message.split(" ")
+        user_matricula = user_message[1]
+
+        ## Verificando se a matrícula tem 9 dígitos
+        if len(user_matricula) == 9:
+            #Descobrindo informaçôes do usuario atraves da conta dele no telegram
+            user_info = update.message
+            info = {"First_Name": user_info.from_user.first_name, "Last_Name": user_info.from_user.last_name,
+                    "Matrícula": user_matricula}
+            print(info)
+            context.bot.send_message(chat_id=update.effective_chat.id,
+                                     text="deu certooo",
+                                     reply_markup=ReplyKeyboardRemove())
+        else:
+            print("deu errado :( ")
+            context.bot.send_message(chat_id=update.effective_chat.id,
+                             text="Matricula, inválida. Tente novamente\n OBS: sua matricula deve ter 9 digitos.",
+                             reply_markup=ReplyKeyboardRemove())
+    except Exception as e:
+        context.bot.send_message(chat_id=update.effective_chat.id,
+                                 text=f"Erro. Tente novamente. \nException: {e}",
                                  reply_markup=ReplyKeyboardRemove())
-        t = StudentText()
-        t.name(update, context)
-        t.matricula(update, context)
 
 ## comando para verificar a entrada do professor
 def professorEntrada(update,context):

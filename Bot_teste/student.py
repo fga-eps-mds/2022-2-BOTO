@@ -1,3 +1,7 @@
+"""
+
+Esse arquivo teacher.py podera ser excluido se o pullrequest da issue #24 for aceita
+
 from telegram.ext import *
 from telegram import *
 import time
@@ -15,9 +19,9 @@ class StudentText():
         time.sleep(5)
     def matricula(self, update, context):
         context.bot.send_message(chat_id=update.effective_chat.id,
-                                 text='Qual a sua matricula?', reply_markup=ForceReply())
+                                 text='Digite sua matricula?', reply_markup=ForceReply())
 
         matriculaAluno = update.message.text
         time.sleep(5)
 
-
+"""
