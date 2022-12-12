@@ -36,6 +36,7 @@ Depois:
 - Consiga um Token em [BotFather](https://telegram.me/BotFather)
 - Vá em Bot_teste/boto.py
 - Insira o TOKEN no arquivo.
+- Você já pode utilizar o Bot.
 
 
 # Squad 2
