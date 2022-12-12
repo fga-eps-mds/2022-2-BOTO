@@ -12,8 +12,32 @@ o BOTO é um bot criado pelos alunos da FGA-UNB, que tem como principal função
 
 # Nossa arquitetura
 > :construction: Projeto em construção :construction:
+
 # Como testar o BOTO no telegram
-> :construction: Projeto em construção :construction:
+### 🛠 Tecnologias e Pré-Requisitos
+- Python 
+- Telegram
+- MySQL
+
+### ✔️ Instalando e executando
+
+    git clone https://github.com/fga-eps-mds/2022-2-Squad02
+    
+Abra o projeto e no terminal digite:
+  
+    $ pip install pyTelegramBotAPI
+
+   
+Depois: 
+      
+    $ pip install emoji
+    
+  
+#### Utilização
+- Consiga um Token em [BotFather](https://telegram.me/BotFather)
+- Vá em Bot_teste/boto.py
+- Insira o TOKEN no arquivo.
+
 
 # Squad 2
 
