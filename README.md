@@ -14,10 +14,9 @@ o BOTO é um bot criado pelos alunos da FGA-UNB, que tem como principal função
 > :construction: Projeto em construção :construction:
 
 # Como testar o BOTO no telegram
-### 🛠 Tecnologias e Pré-Requisitos
+### Pré-Requisitos
 - Python 
 - Telegram
-- MySQL
 
 ### ✔️ Instalando e executando
 
