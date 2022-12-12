@@ -95,3 +95,8 @@ def help_command(update, context):
                               "/editar_conteudo - altera um conteudo existente na base de dados.\n"
                               "/contatosProfessor - exibe formas de entrar em contato com o professor.")
 
+def plano_de_ensino(update, context):
+    update.message.reply_text("https://drive.google.com/file/d/1PqsmJ7QVNAPDuodKE5TQriUnKYLzisqp/view?usp=share_link")
+
+
+
