@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!--=============== FAVICON ===============-->
+        <link rel="shortcut icon" href="assets/img/icon.png" type="image/x-icon">
+
+        <!--=============== REMIXICONS ===============-->
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+
+        <!--=============== CSS ===============-->
+        <link rel="stylesheet" href="assets/css/styles.css">
+
+        <title>BOTO</title>
+    </head>
+    <body>
+        <!--==================== HEADER ====================-->
+        <header class="header" id="header">
+            <nav class="nav container">
+                <a href="#" class="nav__logo">
+                    <img src="assets/img/nav.png" alt="logo image">
+                    BOTO
+                </a>
+
+                <div class="nav__menu" id="nav-menu">
+                    <ul class="nav__list grid">
+                        <li class="nav__item">
+                            <a href="#home" class="nav__link">Home</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#about" class="nav__link">Sobre</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#popular" class="nav__link">Funcionalidades</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#recently" class="nav__link">Protótipo</a>
+                        </li>
+
+                        <li class="nav__item">
+                            <a href="#equipe" class="nav__link">Equipe</a>
+                        </li>
+                    </ul>
+
+                    <!--Close botton-->
+
+                    <div class="nav__close" id="nav-close">
+                        <i class="ri-close-line"></i>
+                    </div>
+
+                    <img src="assets/img/leaf-branch-4.png" alt="nav image" class="nav__img-1">
+                    <img src="assets/img/leaf-branch-3.png" alt="nav image" class="nav__img-2">
+                </div>
+
+                <div class="nav__buttons">
+                    <!--Theme change button-->
+                    <i class="ri-moon-line change-theme" id="theme-button"></i>
+
+                    <!--Toggle button-->
+                    <div class="nav__toggle" id="nav-toggle">
+                        <i class="ri-menu-5-line"></i>
+                    </div>
+                    
+
+                </div>
+            </nav>
+        </header>
+
+        <!--==================== MAIN ====================-->
+        <main class="main">
+            <!--==================== HOME ====================-->
+            <section class="home section" id="home">
+                <div class="home__container container grid">
+                    <img src="assets/img/inicio.png" alt="home image" class="home__img">
+
+                    <div class="home__data">
+                        <h1 class="home__title">
+                            Boto
+
+                            <div>
+                                <img src="assets/img/icon_help.png" alt="home image ">
+                                Seu ajudante
+                            </div>
+                        </h1>
+
+                        <p class="home__description">
+                            Para professores, para alunos<br>
+                            diversas funcionalidades.
+                        </p>
+
+                        <a href="https://github.com/fga-eps-mds/2022-2-BOTO" class="button">
+                            Repositório <i class="ri-github-fill"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <img src="assets/img/leaf-branch-2.png" alt="home image" class="home__leaf-1">
+                <img src="assets/img/leaf-branch-4.png" alt="home image" class="home__leaf-2">
+                
+            </section>
+
+            <!--==================== ABOUT ====================-->
+            <section class="about section" id="about">
+                <div class="about__container container grid">
+                    <div class="about__data">
+                        <span class="section__subtitle">Sobre</span>
+                        <h2 class="section__title about__title">                           
+
+                        </h2>
+
+                        <p class="about__description">
+                            O BOTO é um bot do telegram, que surgiu durante a disciplina Métodos de desenvolvimento
+                            de software da FGA, ministrada pela professora Carla Rocha.<br> <br> 
+                            
+                            Ele foi imaginado com o intuito de facilitar a rotina dos professores, que ao utilizarem
+                            poderam receber dados de suas turmas somente com um comando.<br> <br> 
+                            
+                            E seus alunos poderam ter acesso fácil à vídeos, contéudos, plano de ensino...
+                            o envio de conteúdos para seus alunos
+                          
+                        </p>
+                    </div>
+
+                    <img src="assets/img/sobre.png" alt="about image" class="about__img">
+                </div>
+                <img src="assets/img/leaf-branch-1.png" alt="about image" class="about__leaf">
+            </section>
+
+            <!--==================== POPULAR ====================-->
+            <section class="popular section" id="popular">
+                <span class="section__subtitle">Features</span>
+                <h2 class="section__title">Funcionalidades</h2>
+
+                <div class="popular__container container grid">
+                    <article class="popular__card">
+                        <img src="assets/img/acom.png" alt="popular image" class="popular__img">
+
+                        <h3 class="popular__name">Acompanhamento</h3>
+                        <br>
+                        <span class="popular__description">
+                            Professor: Acesso ao avanço dos alunos, dados gerais da turma.<br> <br>
+                            Alunos: Avanço no contéudo, provas.                       
+                        
+                        </span>                        
+                    </article>
+
+                    <article class="popular__card">
+                        <img src="assets/img/sent.png" alt="popular image" class="popular__img-1">
+
+                        <h3 class="popular__name">Envio</h3>
+                        <br>
+                        <span class="popular__description">
+                            Professor: Enviar mensagem a diversos alunos ao mesmo tempo.<br> <br>
+                            Alunos: Contato do professor(a) com 1 click.                           
+                        
+                        </span>                        
+                    </article>
+
+                    <article class="popular__card">
+                        <img src="assets/img/not.png" alt="popular image" class="popular__img-2">
+
+                        <h3 class="popular__name">Lembretes</h3>
+                        <br>
+                        <span class="popular__description">Alunos: Criar lembretes de horário de estudo, data das provas</span>
+                        </article>
+
+                        <article class="popular__card">
+                            <img src="assets/img/docs2.png" alt="popular image" class="popular__img-3">
+    
+                            <h3 class="popular__name">Acesso</h3>
+                            <br>
+                            <span class="popular__description">
+                                Professor: Estatísticas.<br> <br>
+                                Alunos: Plano de ensino, imagens, vídeos.                         
+                            
+                            </span>                        
+                        </article>
+                </div>
+                
+            </section>
+
+            <!--==================== RECENTLY ====================-->
+            <section class="recently section" id="recently">
+                <div class="recently_-container container grid">
+                    <div class="recently__data">
+                        <span class="section__subtitle">Protótipo</span>
+                        <h2 class="section__title">
+                            Versão aluno
+                        </h2>
+
+                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="500" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fjg8uxpnOEyLobSwp0HvG3e%2FTelegram-prototipo%3Fnode-id%3D35%253A4%26scaling%3Dmin-zoom%26page-id%3D0%253A3506%26starting-point-node-id%3D35%253A4%26show-proto-sidebar%3D1" allowfullscreen></iframe>
+
+                        <br> <br>
+                        <h2 class="section__title">
+                            Versão professor
+                        </h2>
+                        
+                        <iframe style="border: 1px solid rgba(0, 0, 0, 0.1);" width="500" height="800" src="https://www.figma.com/embed?embed_host=share&url=https%3A%2F%2Fwww.figma.com%2Fproto%2Fjg8uxpnOEyLobSwp0HvG3e%2FTelegram-prototipo%3Fnode-id%3D44%253A420%26scaling%3Dmin-zoom%26page-id%3D0%253A3506%26starting-point-node-id%3D44%253A420%26show-proto-sidebar%3D1" allowfullscreen></iframe>
+
+                        <img src="assets/img/hat.png" alt="recently image" class="recently__data-img">
+                    </div>
+
+                    
+                </div>
+
+                <img src="assets/img/leaf-branch-2.png" alt="recently image" class="recently__leaf-1">
+                <img src="assets/img/leaf-branch-3.png" alt="recently image" class="recently__leaf-2">
+                
+            </section>
+
+            <!--==================== Equipe ====================-->
+            <section class="equipe section" id="equipe">
+                <div class="equipe__container container grid">
+                    <div class="equipe__data">
+                        <span class="section__subtitle">Equipe</span>
+                        <h2 class="section__title equipe__title">                           
+
+                        </h2>
+
+                        
+                    </div>
+
+                    <img src="assets/img/squad.png" alt="equipe image" class="equipe__img">
+                </div>
+                
+            </section>
+        </main>
+
+        <!--==================== FOOTER ====================-->
+        <footer class="footer">
+            <div class="footer__container container grid">           
+            
+                <span class="footer__copy">
+                    &#169; Squad 2. All rights reserved
+                </span>
+                <img src="assets/img/leaf-branch-2.png" alt="footer image" class="footer_leaf">
+            </div>
+        
+            
+        </footer>       
+
+
+        <!--=============== SCROLLREVEAL ===============-->
+        <script src=""></script>
+
+        <!--=============== MAIN JS ===============-->
+        <script src="assets/js/main.js"></script>
+    </body>
+</html>
