@@ -1,10 +1,10 @@
 # 2022/2-BOTO
 <div align="center">
-    <img src="https://github.com/fga-eps-mds/2022-2-BOTO/blob/main/Manual%20de%20estilo-%20Boto/203332956-cb829463-1e57-49fb-aa91-8a7b0db4052e.png" height="400px" width="500px"></img>
+    <img src="https://github.com/fga-eps-mds/2022-2-BOTO/blob/main/assets/img/icon.png" height="400px" width="400px"></img>
 </div>
 
 # <h1 align="center"> BOTO </h1>
-Esse repostório é destinado para atualizar, modificar e informar aos usuários e/ou contribuintes do repositório.
+Esse repostório é destinado para atualizar, modificar e informar aos usuários e/ou contribuintes do repositório sobre o nosso bot BOTO.
 
 ## :dolphin: O que é o BOTO
 
