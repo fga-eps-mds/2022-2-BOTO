@@ -8,7 +8,7 @@ Esse repostório é destinado para atualizar, modificar e informar aos usuários
 
 ## :dolphin: O que é o BOTO
 
-O BOTO é um bot do telegram que facilita aos professores enviarem conteúdos para seus alunos, desta forma ele recebe uma base de dados dos conteúdos de uma disciplina e distribui aos seus alunos que assinaram o bot, esses podem ser vídeos, exercícios, curiosidades e etc.
+O BOTO é um bot do telegram que facilita aos professores enviarem conteúdos para seus alunos, desta forma ele recebe uma base de dados dos conteúdos de uma disciplina e distribui aos alunos que assinaram o bot, esses podem ser vídeos, exercícios, curiosidades e etc.
 
 ## :space_invader: Tecnologias utilizadas
 - Python
