@@ -1,38 +1,43 @@
 # 2022/2-BOTO
+<div align="center">
+    <img src="https://github.com/fga-eps-mds/2022-2-BOTO/blob/main/Manual%20de%20estilo-%20Boto/203332956-cb829463-1e57-49fb-aa91-8a7b0db4052e.png" height="400px" width="500px"></img>
+</div>
 
-![logo boto](https://user-images.githubusercontent.com/86479209/203332956-cb829463-1e57-49fb-aa91-8a7b0db4052e.png)
+# <h1 align="center"> BOTO </h1>
+Esse repostório é destinado para atualizar, modificar e informar aos usuários e/ou contribuintes do repositório.
 
-# <h1 align="center"> Resumo do BOTO </h1>
-o BOTO é um bot criado pelos alunos da FGA-UNB, que tem como principal função de ter acesso a informações importantes das materias pelo telegram.
+## :dolphin: O que é o BOTO
 
+O BOTO é um bot do telegram que facilita aos professores enviarem conteúdos para seus alunos, desta forma ele recebe uma base de dados dos conteúdos de uma disciplina e distribui aos seus alunos que assinaram o bot, esses podem ser vídeos, exercícios, curiosidades e etc.
 
-# Tecnologias utilizadas
+## :space_invader: Tecnologias utilizadas
 - Python
 - MySQL
 
-# Nossa arquitetura
+## :hammer: Nossa arquitetura
 > :construction: Projeto em construção :construction:
 
-# Como testar o BOTO no telegram
-### Pré-Requisitos
+## :scroll: Guia de uso do BOTO
+
+#### Pré-Requisitos
 - Python 
 - Telegram
 
-### ✔️ Instalando e executando
-
+#### Instalando e executando
+``````
     git clone https://github.com/fga-eps-mds/2022-2-Squad02
-    
-Abra o projeto e no terminal digite:
-  
+ ``````   
+* Abra o projeto e no terminal digite:
+``````
     $ pip install pyTelegramBotAPI
-
+``````
    
-Depois: 
-      
+* Depois: 
+``````      
     $ pip install emoji
-    
+``````    
   
-#### Utilização
+### Utilização
 - Consiga um Token em [BotFather](https://telegram.me/BotFather)
 - Vá em Bot_teste/boto.py
 - Insira o TOKEN no arquivo.
