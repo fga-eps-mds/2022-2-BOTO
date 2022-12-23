@@ -5,7 +5,7 @@ parametros = dict(
     host='localhost',
     port=3306,
     user='root',
-    password='', ## usar senha do seu DB
+    password='211041295', ## usar senha do seu DB
     database='BOTO'
 )
 
