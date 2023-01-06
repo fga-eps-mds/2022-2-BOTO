@@ -2,23 +2,15 @@ from telegram import *
 import emoji
 
 ## comandos iniciais
-teacherText = "Professor"
-studentText = "Aluno"
 
 def start(update, context):
-    buttons = [[KeyboardButton(teacherText)], [KeyboardButton(studentText)]]
     context.bot.send_message(chat_id=update.effective_chat.id,
                              text= "Olá, seja bem vindo ao Boto! \nPrimeiro gostariamos de algumas informações.\n\nPara ter acesso a todos os comandos digite /help.",
-                             reply_markup=ReplyKeyboardMarkup(buttons))
+                             reply_markup=ReplyKeyboardRemove())
 
 ##Lidando com a escolha do start
 def handle_message(update, context):
-    if teacherText in update.message.text:
-        context.bot.send_message(chat_id=update.effective_chat.id, text= "Olá, professor digite /professorEntrada e seu código \nExemplo: '/professorEntrada 123456'",
-                                 reply_markup=ReplyKeyboardRemove())
-
-    if studentText in update.message.text:
-        context.bot.send_message(chat_id=update.effective_chat.id, text= "Olá, Aluno!\n Para continuar digite, /matricula e sua matricula.\n 'Exemplo: /matricula 210000000'", reply_markup=ReplyKeyboardRemove())
+    context.bot.send_message(chat_id=update.effective_chat.id, text= "Olá, Aluno!\n Para continuar digite, /matricula e sua matricula.\n 'Exemplo: /matricula 210000000'", reply_markup=ReplyKeyboardRemove())
 
 def alunoEntrada(update, context):
     try:
@@ -46,34 +38,6 @@ def alunoEntrada(update, context):
                                  text=f"Erro. Tente novamente. \nException: {e}",
                                  reply_markup=ReplyKeyboardRemove())
 
-## comando para verificar a entrada do professor
-def professorEntrada(update,context):
-    ##Codigo correto professor
-    codigoprofessor = "p123"
-
-    try:
-        ##Pegando o codigo digitado na mensagem
-        user_message = update.message.text
-        user_message = user_message.split(" ")
-        user_code = user_message[1]
-
-        ##Verificando se o codigo inserido é o desejado
-        if user_code == codigoprofessor:
-            ##Descobrindo informaçôes do usuario atraves da conta dele no telegram
-            user_info = update.message
-            info = {"First_Name": user_info.from_user.first_name, "Last_Name": user_info.from_user.last_name,
-                    "Código": user_code}
-            print(info)
-            update.message.reply_text(
-                "Bem vindo, Professora " + user_info.from_user.first_name + "!\n\nEsses são seus comandos:\n/informacoesAlunos\n/estatisticasAluno\n/enviarMensagem.")
-
-        else:
-            context.bot.send_message(chat_id=update.effective_chat.id, text = "Código, incorreto. Tente novamente.\nDigite /start para entrar como aluno ou /professorEntrada e seu código. \nExemplo: '/professorEntrada 123456'",
-                                     reply_markup=ReplyKeyboardRemove())
-    except Exception as e:
-        context.bot.send_message(chat_id=update.effective_chat.id,
-                                 text= f"Erro. Tente novamente. \nException: {e}",
-                                 reply_markup=ReplyKeyboardRemove())
 def contatosProfessor(update, context):
     update.message.reply_text("Estes são os contatos da sua professora:\n\n"
                               "E-mail: carla@boto.com\n"
