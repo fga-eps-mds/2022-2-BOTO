@@ -29,7 +29,7 @@ O BOTO é um bot do telegram que facilita aos professores enviarem conteúdos pa
  ``````   
 * Abra o projeto e no terminal digite:
 ``````
-    $ pip install pyTelegramBotAPI
+    $ pip install python-telegram-bot --upgrade
 ``````
    
 * Depois: 
