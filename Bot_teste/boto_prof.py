@@ -1,25 +1,33 @@
+from telegram import ReplyKeyboardMarkup, ReplyKeyboardRemove, Update
+from telegram.ext import (
+    Application,
+    CommandHandler,
+    ContextTypes,
+    ConversationHandler,
+    MessageHandler,
+    filters,
+)
+
 from telegram.ext import *
 import handlers_prof
 
-print("Bot started. . .\n")
+def main():
 
-TOKEN = "5805348211:AAG5EDK_B5pI0nWMBE1Vr9q4rKeF57ptz-U"
+    TOKEN = "5840991803:AAGxIhCYY3dNqpQglvaxkdLZp0zMAwKlpZk"
 
-updater = Updater(token=TOKEN)
-dp = updater.dispatcher
 
-dp.add_handler(CommandHandler("start", handlers_prof.start))
-dp.add_handler(CommandHandler("help", handlers_prof.help_command))
+    dp =  Application.builder().token(TOKEN).build()
 
-dp.add_handler(CommandHandler("novo_conteudo", handlers_prof.not_finished))
-dp.add_handler(CommandHandler("acessar_conteudo", handlers_prof.not_finished))
-dp.add_handler(CommandHandler("deletar_conteudo", handlers_prof.not_finished))
-dp.add_handler(CommandHandler("editar_conteudo", handlers_prof.not_finished))
+    dp.add_handler(CommandHandler("help", handlers_prof.help_command))
+    dp.add_handler(CommandHandler("plano_de_ensino", handlers_prof.plano_de_ensino))
+    dp.add_handler(CommandHandler("cadastrar_conteudo", handlers_prof.cadastrar_conteudo))
 
-dp.add_handler(CommandHandler("professorEntrada", handlers_prof.professorEntrada))
-dp.add_handler(CommandHandler("plano_de_ensino", handlers_prof.plano_de_ensino))
+    dp.add_handler(handlers_prof.entrada_conversation)
+    dp.add_handler(handlers_prof.enviar_planilha_conversation)
 
-dp.add_handler(MessageHandler(Filters.text, handlers_prof.handle_message))
+    print("Bot started. . .\n")
+    dp.run_polling()
+    print("Bot finished. . .\n")
 
-updater.start_polling(4)
-updater.idle()
+if __name__ == "__main__":
+    main()
